@@ -4126,7 +4126,7 @@ end;
 procedure THtmlViewer.OpenPrint;
 begin
   if vwP = nil then
-    vwP := TMetaFilePrinter.Create(Self);
+    vwP := TvwPrinter.Create(Self);
 end;
 
 procedure THtmlViewer.ClosePrint;
