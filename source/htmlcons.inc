@@ -109,102 +109,64 @@ are covered by separate copyright notices located in those modules.
   {$ifdef CONDITIONALEXPRESSIONS} {Delphi 6 and up}
     {.$define ver100_plus}
     {.$define ver120_plus}
-    {$ifdef ver140}
-    {$else}
+    {$ifdef VER140} {$define Compiler14_Plus} {$endif} {Delphi 6}
+    {$ifdef VER150} {$define Compiler15_Plus} {$endif} {Delphi 7}
+    {$ifdef VER160} {$define Compiler16_Plus} {$endif} {Delphi 8}
+    {$ifdef VER170} {$define Compiler17_Plus} {$endif} {Delphi 2005}
+    {$ifdef VER180} {$define Compiler18_Plus} {$endif} {Delphi 2006}
+    {$ifdef VER185} {$define Compiler19_Plus} {$endif} {Delphi 2007}
+    {$ifdef VER200} {$define Compiler20_Plus} {$endif} {Delphi 2009}
+    {$ifdef VER210} {$define Compiler21_Plus} {$endif} {Delphi 2010}
+    {$ifdef VER220} {$define Compiler22_Plus} {$endif} {Delphi XE}
+    {$ifdef VER230} {$define Compiler23_Plus} {$endif} {Delphi XE2}
+    {$ifdef VER240} {$define Compiler24_Plus} {$endif} {Delphi XE3}
+    {$ifdef VER250} {$define Compiler25_Plus} {$endif} {Delphi XE4}
+    {$ifdef VER260} {$define Compiler26_Plus} {$endif} {Delphi XE5}
+    {$ifdef VER270} {$define Compiler27_Plus} {$endif} {Delphi XE6}
+    {$ifdef VER280} {$define Compiler28_Plus} {$endif} {Delphi XE7}
+    {$ifdef VER290} {$define Compiler29_Plus} {$endif} {Delphi XE8}
+    {$ifdef VER300} {$define Compiler30_Plus} {$endif} {Delphi 10 Seattle}
+    {$ifdef VER310} {$define Compiler31_Plus} {$endif} {Delphi 10.1 Berlin}
+    {$ifdef VER320} {$define Compiler32_Plus} {$endif} {Delphi 10.2 Tokyo}
+    {$ifdef VER330} {$define Compiler33_Plus} {$endif} {Delphi 10.3 Rio}
+    {$ifdef VER340} {$define Compiler34_Plus} {$endif} {Delphi 10.4 Sydney}
+    {$ifdef VER350} {$define Compiler35_Plus} {$endif} {Delphi 11 Alexandria}
+    {$ifdef VER360} {$define Compiler36_Plus} {$endif} {Delphi 12 Athens}
+    {$ifdef VER370} {$define Compiler37_Plus} {$endif} {Delphi 13 Florence}
+
+    {$if CompilerVersion > 37}
+      // Future compiler version
+      {$define Compiler37_Plus}
+    {$ifend}
+
+    {$ifdef Compiler37_Plus} {$define Compiler36_Plus} {$endif}
+    {$ifdef Compiler36_Plus} {$define Compiler35_Plus} {$endif}
+    {$ifdef Compiler35_Plus} {$define Compiler34_Plus} {$endif}
+    {$ifdef Compiler34_Plus} {$define Compiler33_Plus} {$endif}
+    {$ifdef Compiler33_Plus} {$define Compiler32_Plus} {$endif}
+    {$ifdef Compiler32_Plus} {$define Compiler31_Plus} {$endif}
+    {$ifdef Compiler31_Plus} {$define Compiler30_Plus} {$endif}
+    {$ifdef Compiler30_Plus} {$define Compiler29_Plus} {$endif}
+    {$ifdef Compiler29_Plus} {$define Compiler28_Plus} {$endif}
+    {$ifdef Compiler28_Plus} {$define Compiler27_Plus} {$endif}
+    {$ifdef Compiler27_Plus} {$define Compiler26_Plus} {$endif}
+    {$ifdef Compiler26_Plus} {$define Compiler25_Plus} {$endif}
+    {$ifdef Compiler25_Plus} {$define Compiler24_Plus} {$endif}
+    {$ifdef Compiler24_Plus}
+      {$define Compiler23_Plus}
+      {$LEGACYIFEND ON}
+    {$endif}
+    {$ifdef Compiler23_Plus} {$define Compiler22_Plus} {$endif}
+    {$ifdef Compiler22_Plus} {$define Compiler21_Plus} {$endif}
+    {$ifdef Compiler21_Plus} {$define Compiler20_Plus} {$endif}
+    {$ifdef Compiler20_Plus} {$define Compiler19_Plus} {$endif}
+    {$ifdef Compiler19_Plus} {$define Compiler18_Plus} {$endif}
+    {$ifdef Compiler18_Plus} {$define Compiler17_Plus} {$endif}
+    {$ifdef Compiler17_Plus} {$define Compiler16_Plus} {$endif}
+    {$ifdef Compiler16_Plus} {$define Compiler15_Plus} {$endif}
+    {$ifdef Compiler15_Plus}
+      {$define Compiler14_Plus}
       {.$define Delphi7_Plus}
-      {$define Compiler15_Plus}
-      {$ifdef ver150}
-      {$else}
-        {$define Compiler16_Plus}
-        {$ifdef ver160}
-        {$else}
-          {$define Compiler17_Plus}
-          {$ifdef ver170}
-          {$else}
-            {$define Compiler18_Plus}
-            {$ifdef ver180}
-            {$else}
-              {.$define Compiler19_Plus}
-              {$ifdef ver185}
-              {$else}
-                {$define Compiler20_Plus}
-                {$ifdef ver200}
-                {$else}
-                  {$define Compiler21_Plus}
-                  {$ifdef ver210}
-                  {$else}
-                    {$define Compiler22_Plus}
-                    {$ifdef ver220}
-                    {$else}
-                      {$define Compiler23_Plus}
-                      {$ifdef ver230}
-                      {$else}
-                        {$define Compiler24_Plus}
-                        {$ifdef ver240}
-                        {$else}
-                          {.$define Compiler25_Plus}
-                          {$ifdef ver250}
-                          {$else}
-                            {.$define Compiler26_Plus}
-                            {$ifdef ver260}
-                            {$else}
-                              {.$define Compiler27_Plus}
-                              {$ifdef ver270}
-                              {$else}
-                                {$define Compiler28_Plus}
-                                {$ifdef ver280}
-                                {$else}
-                                  {.$define Compiler29_Plus}
-                                  {$ifdef ver290}
-                                  {$else}
-                                    {.$define Compiler30_Plus}
-                                    {$ifdef ver300}
-                                    {$else}
-                                      {$define Compiler31_Plus}
-                                      {$ifdef ver310}
-                                      {$else}
-                                        {$define Compiler32_Plus}
-                                        {$ifdef ver320}
-                                        {$else}
-                                          {.$define Compiler33_Plus}
-                                          {$ifdef ver330}
-                                          {$else}
-                                            {$define Compiler34_Plus}
-                                            {$ifdef ver340}
-                                            {$else}
-                                              {.$define Compiler35_Plus}
-                                              {$ifdef ver350}
-                                              {$else}
-                                                {.$define Compiler36_Plus}
-                                                {$ifdef ver360}
-                                                {$else}
-                                                  {.$define Compiler37_Plus}
-                                                  {$ifdef ver370}
-                                                  {$else}
-                                                  {$endif}
-                                                {$endif}
-                                              {$endif}
-                                            {$endif}
-                                          {$endif}
-                                        {$endif}
-                                      {$endif}
-                                    {$endif}
-                                  {$endif}
-                                {$endif}
-                              {$endif}
-                            {$endif}
-                          {$endif}
-                        {$endif}
-                        {$LEGACYIFEND ON}
-                      {$endif}
-                    {$endif}
-                  {$endif}
-                {$endif}
-              {$endif}
-            {$endif}
-          {$endif}
-        {$endif}
-      {$endif}
     {$endif}
     {$ifndef Compiler20_Plus}
       // Might still work or not. Oldest tested version is 2009.
