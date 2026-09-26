@@ -119,7 +119,7 @@ are covered by separate copyright notices located in those modules.
     {$if CompilerVersion >= 22} {$define Compiler22_Plus} {$ifend} {Delphi XE}
     {$if CompilerVersion >= 23} {$define Compiler23_Plus} {$ifend} {Delphi XE2}
     {$if CompilerVersion >= 24} {$define Compiler24_Plus} {$ifend} {Delphi XE3}
-    {$if CompilerVersion >= 25} {.$define Compiler25_Plus} {$ifend} {Delphi XE4}
+    {$if CompilerVersion >= 25} {$define Compiler25_Plus} {$ifend} {Delphi XE4}
     {$if CompilerVersion >= 26} {.$define Compiler26_Plus} {$ifend} {Delphi XE5}
     {$if CompilerVersion >= 27} {.$define Compiler27_Plus} {$ifend} {Delphi XE6}
     {$if CompilerVersion >= 28} {$define Compiler28_Plus} {$ifend} {Delphi XE7}
@@ -134,7 +134,7 @@ are covered by separate copyright notices located in those modules.
     {$if CompilerVersion >= 37} {.$define Compiler37_Plus} {$ifend} {Delphi 13 Florence}
 
     {$ifdef Compiler15_Plus} {.$define Delphi7_Plus} {$endif}
-    {$ifdef Compiler24_Plus} {$LEGACYIFEND ON} {$endif}
+    {$ifdef Compiler25_Plus} {$LEGACYIFEND ON} {$endif}
 
     {$ifndef Compiler20_Plus}
       // Might still work or not. Oldest tested version is 2009.
