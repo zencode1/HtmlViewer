@@ -151,11 +151,11 @@ are covered by separate copyright notices located in those modules.
     {$ifdef Compiler28_Plus} {$define Compiler27_Plus} {$endif}
     {$ifdef Compiler27_Plus} {$define Compiler26_Plus} {$endif}
     {$ifdef Compiler26_Plus} {$define Compiler25_Plus} {$endif}
-    {$ifdef Compiler25_Plus} {$define Compiler24_Plus} {$endif}
-    {$ifdef Compiler24_Plus}
-      {$define Compiler23_Plus}
+    {$ifdef Compiler25_Plus}
+      {$define Compiler24_Plus}
       {$LEGACYIFEND ON}
     {$endif}
+    {$ifdef Compiler24_Plus} {$define Compiler23_Plus} {$endif}
     {$ifdef Compiler23_Plus} {$define Compiler22_Plus} {$endif}
     {$ifdef Compiler22_Plus} {$define Compiler21_Plus} {$endif}
     {$ifdef Compiler21_Plus} {$define Compiler20_Plus} {$endif}
