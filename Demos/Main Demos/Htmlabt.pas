@@ -154,6 +154,12 @@ begin
 {$IFDEF Ver350}
     'Delphi 11 Alexandria'
 {$ENDIF}
+{$IFDEF Ver360}
+    'Delphi 12 Athens'
+{$ENDIF}
+{$IFDEF Ver370}
+    'Delphi 13 Florence'
+{$ENDIF}
 {$ifdef LCL}
     'Lazarus ' + lcl_version
 {$endif}
